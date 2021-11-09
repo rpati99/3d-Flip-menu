@@ -8,23 +8,10 @@
 
 import UIKit
 
-
-extension UILabel {
-    static func createMenuItem(name: String, color: UIColor = .black, size: CGFloat) -> UILabel {
-        let label = UILabel()
-        label.text = name
-        label.font = UIFont(name: "BlackRocker", size: size)
-        label.textColor = color
-        return label
-    }
-}
 class MenuController: UIViewController {
     
-    
-    
     // MARK: - Properties
-    
-    
+
     private let guitar: UILabel = {
         let label = UILabel.createMenuItem(name: "guitars", color: .red, size: 30)
         return label
@@ -85,13 +72,13 @@ class MenuController: UIViewController {
         setupUI()
         mutateSize()
     }
-
     
     // MARK: - Helpers
     
     func mutateSize() {
         self.preferredContentSize = CGSize(width: view.frame.width - 100, height: view.frame.height)
     }
+    
     func setupUI() {
         view.backgroundColor = UIColor(red: 231/255, green: 222/255, blue: 210/255, alpha: 1.0)
         view.addSubview(guitar)
@@ -113,10 +100,4 @@ class MenuController: UIViewController {
         view.addSubview(faq)
         faq.anchor(top: terms.bottomAnchor, left: view.leftAnchor,  paddingTop: 10, paddingLeft: 40)
     }
-    
-    
-    
-    
-
-
 }

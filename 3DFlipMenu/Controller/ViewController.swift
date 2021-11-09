@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    
-   
-    
+
     private let menuIcon: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named:"menu"), for: .normal)
@@ -48,27 +46,12 @@ class ViewController: UIViewController {
         return label
     }()
     
-    
-    
-   
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-     
-
-
-        
     }
-    
-    // MARK: - Selectors
-    
-    
-    // MARK: - API
-    
-    
     
     // MARK: - Helpers
  
@@ -85,9 +68,6 @@ class ViewController: UIViewController {
         
         view.addSubview(spec)
         spec.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 20, paddingRight: 20)
-        
-
-        
     }
 }
 
