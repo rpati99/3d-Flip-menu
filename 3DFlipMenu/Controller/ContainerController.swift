@@ -1,7 +1,7 @@
 import UIKit
 import  SceneKit
 
-class ContainerController: UIViewController {
+final class ContainerController: UIViewController {
     var scnView: SCNView!
     var geometryNode: SCNNode!
     var menuWidth: CGFloat!
