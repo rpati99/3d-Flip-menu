@@ -10,6 +10,7 @@ import UIKit
 //MARK: - UIView
 
 extension UIView {
+    
    func anchor(top: NSLayoutYAxisAnchor? = nil,
                left: NSLayoutXAxisAnchor? = nil,
                bottom: NSLayoutYAxisAnchor? = nil,
@@ -85,29 +86,6 @@ extension UIView {
               bottom: view.bottomAnchor, right: view.rightAnchor)
    }
    
-   func createContainer(image: UIImage?, textField: UITextField) -> UIView {
-       let view = UIView()
-       
-       let imageView = UIImageView()
-       imageView.image = image
-       view.addSubview(imageView)
-       imageView.centerY(inView: view)
-       imageView.anchor(left: view.leftAnchor, paddingLeft: 8, width: 24, height: 24)
-       
-       view.addSubview(textField)
-       textField.anchor(left: imageView.rightAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, paddingBottom: 8)
-       textField.centerY(inView: view)
-       
-       let seperatorView = UIView()
-       seperatorView.backgroundColor = .lightGray
-       view.addSubview(seperatorView)
-       seperatorView.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 0.75)
-       return view
-       
-       
-       
-   }
-   
    
 }
 
@@ -138,32 +116,6 @@ extension UIColor {
    
    static let twitterBlue = UIColor.rgb(red: 29, green: 161, blue: 242)
 }
-
-//MARK: - UIButton
-
-extension UIButton {
-   func makeBlackBackgroundButton(title: String) -> UIButton {
-           let button = UIButton(type: .system)
-           button.setTitle(title, for: .normal)
-           button.setTitleColor(.white, for: .normal)
-           button.backgroundColor = .black
-           button.layer.cornerRadius = 15
-           button.anchor(width: 65, height: 32)
-           button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-           return button
-      
-   }
-   
-   func createActionButton(image: UIImage?) -> UIButton {
-       let button = UIButton(type: .system)
-       button.setImage(image, for: .normal)
-       button.setDimensions(width: 30, height: 30)
-       return button
-   }
-   
-
-}
-
 
 
 

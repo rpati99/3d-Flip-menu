@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+final class MenuController: UIViewController {
     
     // MARK: - Properties
 
